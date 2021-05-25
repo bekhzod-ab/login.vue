@@ -8,12 +8,12 @@
                 
                         <label for="email">e-mail</label><br/>
                         <div>
-                            <input type="email" name="" id="email" placeholder="Enter email" required><br/>
+                            <input type="email" name="" id="email" placeholder="Enter email" required v-model="email"><br/>
                         </div><br/>
-
+                        
                         <label for="password">password</label><br/>
                         <div class="passdiv">
-                            <input :type="state? `password` : `text`" name="" id="password" placeholder="Enter password"><span><img src="../assets/icons/eye.svg" id="eye" v-on:click="show()" alt=""></span>
+                            <input :type="state? `password` : `text`" name="" id="password" placeholder="Enter password" v-model="password"><span><img src="../assets/icons/eye.svg" id="eye" v-on:click="show()" alt=""></span>
                             
                             
                         </div>
@@ -22,7 +22,7 @@
                         
                         <p><input type="checkbox" :checked="true" name="terms" id="mark">I agree to the <a href="#">TERMS AND CONDITIONS</a></p>
                         
-                        <button>LOG IN</button>
+                        <button>log in</button>
 
                    
                   
@@ -36,7 +36,8 @@
 export default {
     data() {
         return {
-
+        password: "",
+        email: "",  
         state: true,
         }
         
@@ -86,9 +87,10 @@ form p {
   text-align: center;
 }
 form button {
+  text-transform: uppercase;
   display: block;
   width: 70%;
-  height: 5vh;
+  padding: 1rem 1.5rem;
   margin: 0 auto;
   font-weight: bold;
   color: #fff;
