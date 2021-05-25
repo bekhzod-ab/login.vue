@@ -13,7 +13,7 @@
                         
                         <label for="password">password</label><br/>
                         <div class="passdiv">
-                            <input :type="state? `password` : `text`" name="" id="password" placeholder="Enter password" v-model="password"><span><img src="../assets/icons/eye.svg" id="eye" v-on:click="show()" alt=""></span>
+                            <input :type="state? `password` : `text`" name="" id="password" placeholder="Enter password" required v-model="password"><span><img src="../assets/icons/eye.svg" id="eye" v-on:click="show()" alt=""></span>
                             
                             
                         </div>
